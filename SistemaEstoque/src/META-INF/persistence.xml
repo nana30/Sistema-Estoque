@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0"
+	xmlns="http://java.sun.com/xml/ns/persistence">
+	<persistence-unit name="dbestoquePU">
+		
+		<!-- Criar o class a baixo para cada um das classes que ficam dentro do package model -->
+		<class>br.sistemaestoque.model.ModelCadastroProdutos</class>
+		<class>br.sistemaestoque.view.ProdutosView</class>
+		<class>br.sistemaestoque.controller.ModelProdutosDAOInterfaces</class>
+		<class>br.sistemaestoque.jpa.ModelProdutosDAO</class>
+		<class>br.sistemaestoque.view.ProdutosView</class>
+		
+		 		 
+		 <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<property name="hibernate.connection.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" />
+			<!-- Usuario e senha do banco -->
+			<property name="hibernate.connection.username" value="root" />
+			<property name="hibernate.connection.password" value="" />
+			<!-- dbestoque é o nome do banco-->
+			<property name="hibernate.connection.url"
+				value="jdbc:mysql://localhost:3306/dbestoque?autoReconnect=true" />
+			<property name="initialPoolSize" value="5" />
+			<property name="minPoolSize" value="5" />
+			<property name="maxPoolSize" value="500" />
+		</properties>
+	</persistence-unit>
+</persistence>
